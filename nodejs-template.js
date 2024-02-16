@@ -1,19 +1,29 @@
 const readline = require('readline');
 
+function myFunction(inputs) {
+  // массив строк, если нужны цифры, то inputs.map(Number)
+  return inputs;
+}
+
 const rl = readline.createInterface({
   input: process.stdin,
 });
 
-const lines = [];
+const lines = []; // сюда сохраняем данные из ввода
+let count = 0; 
 rl.on('line', (line) => {
   lines.push(line);
-}).on('close', () => {
-  const [jewels, stones] = lines;
-  let result = 0;
-  for (let i = 0; i < stones.length; i++) {
-    if (jewels.includes(stones.charAt(i))) {
-      ++result;
-    }
+  count += 1;
+  if (count === 3) { // количество строк ввода
+    rl.close();
   }
-  process.stdout.write(result.toString());
+}).on('close', () => {
+
+  // option-1
+  console.log(myFunction(lines));
+  
+  // option-2
+  // может возвращаться массив результатов
+  const res = myFunction(lines);
+  res.forEach((item) => console.log(item));
 });

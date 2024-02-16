@@ -1,0 +1,16 @@
+{
+  "name": "yandex-algos-training",
+  "version": "1.0.0",
+  "description": "yandex-algos-training",
+  "main": "nodejs-template.js",
+  "type": "module",
+  "scripts": {
+    "test": "npx jest",
+    "twatch": "npx jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}

@@ -1,17 +1,6 @@
-const readline = require('readline');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-});
-
-const lines = [];
-
-rl.on('line', (line) => {
-  lines.push(line);
-}).on('close', () => {
+const conditioner = (inputs) => {
   let result = 0;
-
-  const [troom, tcond] = lines[0].split(' ').map(Number);
+	const [troom, tcond] = inputs[0].split(' ').map(Number);
   const mode = lines[1].trim();
   if (mode === 'heat') {
     result = troom < tcond ? tcond : troom;
@@ -22,5 +11,7 @@ rl.on('line', (line) => {
   } else if (mode === 'fan') {
     result = troom;
   }
-  process.stdout.write(result.toString());
-});
+  return result;
+};
+
+export default conditioner;
