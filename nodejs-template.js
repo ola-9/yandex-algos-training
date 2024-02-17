@@ -2,6 +2,7 @@ const readline = require('readline');
 
 function myFunction(inputs) {
   // массив строк, если нужны цифры, то inputs.map(Number)
+  // inputs[0].split(' ').map(Number); - если ввод 1 строка
   return inputs;
 }
 

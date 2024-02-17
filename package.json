@@ -2,7 +2,7 @@
   "name": "yandex-algos-training",
   "version": "1.0.0",
   "description": "yandex-algos-training",
-  "main": "nodejs-template.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "npx jest",

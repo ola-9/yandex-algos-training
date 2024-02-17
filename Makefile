@@ -8,10 +8,10 @@ twatch:
 	npm run twatch
 
 single-test:
-	npm test  -- __tests__/a-conditioner.test.js
+	npm test  -- __tests__/g-details.test.js
 
 wsingle-test:
-	npx jest  --watch __tests__/d-squreRoot.test.js 
+	npx jest  --watch __tests__/g-details.test.js
 
 test-coverage:
 	npm test -- --coverage --coverageProvider=v8
